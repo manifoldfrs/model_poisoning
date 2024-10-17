@@ -75,8 +75,8 @@ async def evaluate_models():
                 print(f"Processed {idx} samples")
 
             # Optional: limit the number of samples for testing purposes
-            # if idx >= 1000:
-            #     break
+            if idx >= 1000:
+                break
 
         # Calculate accuracy, excluding unknown predictions
         valid_indices = [i for i, p in enumerate(predictions) if p != -1]
